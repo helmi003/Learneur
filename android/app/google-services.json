@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "98370322948",
+    "project_id": "learneur-4825a",
+    "storage_bucket": "learneur-4825a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98370322948:android:83f396acc47e49f5402b51",
+        "android_client_info": {
+          "package_name": "com.example.learneur"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98370322948-081h8ll71at1kvtvp4d0atsiugj74aej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK-k9ek_xUjhsBa0bm66tc_UkXZNB_Tto"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "98370322948-081h8ll71at1kvtvp4d0atsiugj74aej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
