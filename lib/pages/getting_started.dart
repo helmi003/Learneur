@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:learneur/model.dart/slide.dart';
 import 'package:learneur/widgets/slide_dots.dart.dart';
 import 'package:learneur/widgets/slide_item.dart.dart';
+
 // ignore: use_key_in_widget_constructors
 class GettingStartedScreen extends StatefulWidget {
   @override
@@ -75,8 +76,8 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              for(int i = 0; i<slideList.length; i++)
-                                if( i == _currentPage )
+                              for (int i = 0; i < slideList.length; i++)
+                                if (i == _currentPage)
                                   SlideDots(true)
                                 else
                                   SlideDots(false)
@@ -94,22 +95,23 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  // ignore: deprecated_member_use
-                  Padding(padding: EdgeInsets.only(left: 30, right: 30),child:TextButton(
-                    onPressed: (){
-                      Navigator.pushReplacementNamed(context, "initialhome");
-                    },
-                    child: Text('Getting started',
-                    style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold)),
-                    style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.orange,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                            )))
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(context, "initialhome");
+                      },
+                      child: Padding(
+                          padding: EdgeInsets.only(left: 30, right: 30),
+                          child: Text('Getting started',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold))),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.orange,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                      ))
                 ],
               )
             ],

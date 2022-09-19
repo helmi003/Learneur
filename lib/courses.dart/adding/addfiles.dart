@@ -49,7 +49,7 @@ class _AddFileState extends State<AddFiles> {
           Center(
               child: TextButton.icon(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.orange,
+                    backgroundColor: Colors.orange,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
@@ -69,7 +69,7 @@ class _AddFileState extends State<AddFiles> {
           Center(
               child: TextButton.icon(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.orange,
+                    backgroundColor: Colors.orange,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),

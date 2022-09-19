@@ -63,28 +63,27 @@ class _StartState extends State<Start> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Padding(
-                    padding: EdgeInsets.only(left: 30, right: 30),
-                    child: TextButton(
-                        onPressed: navigateToLogin,
-                        child: Text(
-                          'LOGIN',
+                ElevatedButton(
+                    onPressed: navigateToLogin,
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 30, right: 30),
+                      child: Text('LOGIN',
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
-                          ),
+                          )),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
                         ),
-                        style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0),
-                            ),
-                            backgroundColor: Colors.orange))),
+                        backgroundColor: Colors.orange)),
                 SizedBox(width: 20.0),
-                Padding(
-                    padding: EdgeInsets.only(left: 30, right: 30),
-                    child: ElevatedButton(
-                        onPressed: navigateToRegister,
+                ElevatedButton(
+                    onPressed: navigateToRegister,
+                    child: Padding(
+                        padding: EdgeInsets.only(left: 30, right: 30),
                         child: Text(
                           'REGISTER',
                           style: TextStyle(
@@ -92,12 +91,12 @@ class _StartState extends State<Start> {
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
                           ),
+                        )),
+                    style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
                         ),
-                        style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0),
-                            ),
-                            backgroundColor: Colors.orange))),
+                        backgroundColor: Colors.orange)),
               ],
             ),
             SizedBox(height: 20.0),

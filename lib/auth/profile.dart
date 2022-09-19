@@ -111,7 +111,7 @@ class _ProfileState extends State<Profile> {
                                   fontSize: 20.0,
                                   fontWeight: FontWeight.bold)),
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.orange,
+                            backgroundColor: Colors.orange,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10.0),
                             ),

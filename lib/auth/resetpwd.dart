@@ -70,26 +70,26 @@ class _ResetpswState extends State<Resetpwd> {
                     }),
                 SizedBox(height: 20),
                 // ignore: deprecated_member_use
-                Padding(
-                    padding: EdgeInsets.fromLTRB(70, 10, 70, 10),
-                    child: ElevatedButton(
-                        onPressed: () {
-                          if (_formKey.currentState!.validate()) {
-                            _auth.sendPasswordResetEmail(email: _email);
-                            showmessage();
-                          }
-                        },
+                ElevatedButton(
+                    onPressed: () {
+                      if (_formKey.currentState!.validate()) {
+                        _auth.sendPasswordResetEmail(email: _email);
+                        showmessage();
+                      }
+                    },
+                    child: Padding(
+                        padding: EdgeInsets.only(left: 30, right: 30),
                         child: Text('Send Request',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 20.0,
-                                fontWeight: FontWeight.bold)),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.orange,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
-                          ),
-                        ))),
+                                fontWeight: FontWeight.bold))),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.orange,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                    )),
                 SizedBox(
                   height: 5,
                 ),

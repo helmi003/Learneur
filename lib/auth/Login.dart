@@ -130,15 +130,16 @@ class _LoginState extends State<Login> {
                           onSaved: (input) => _password = input!),
                     ),
                     SizedBox(height: 20),
-                    Padding(
-                        padding: EdgeInsets.fromLTRB(70, 10, 70, 10),
+                    Center(
                         child: ElevatedButton(
                             onPressed: login,
-                            child: Text('LOGIN',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20.0,
-                                    fontWeight: FontWeight.bold)),
+                            child: Padding(
+                                padding: EdgeInsets.only(left: 30, right: 30),
+                                child: Text('LOGIN',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20.0,
+                                        fontWeight: FontWeight.bold))),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.orange,
                               shape: RoundedRectangleBorder(

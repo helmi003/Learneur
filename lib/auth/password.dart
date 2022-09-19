@@ -139,37 +139,37 @@ class _ChangePasswordState extends State<ChangePassword> {
                 ),
                 Center(
                     // ignore: deprecated_member_use
-                    child: Padding(
-                        padding: EdgeInsets.only(left: 30, right: 30),
-                        child: ElevatedButton(
-                            onPressed: () async {
-                              if (_formKey.currentState!.validate()) {
-                                _formKey.currentState!.save();
-                                try {
-                                  await auth.signInWithEmailAndPassword(
-                                      email: user.email.toString(),
-                                      password: pwd.text);
-                                  user.updatePassword(_password).then((_) {
-                                    validate();
-                                  }).catchError((error) {
-                                    cancel();
-                                  });
-                                } catch (e) {
-                                  cancel();
-                                }
-                              }
-                            },
+                    child: ElevatedButton(
+                        onPressed: () async {
+                          if (_formKey.currentState!.validate()) {
+                            _formKey.currentState!.save();
+                            try {
+                              await auth.signInWithEmailAndPassword(
+                                  email: user.email.toString(),
+                                  password: pwd.text);
+                              user.updatePassword(_password).then((_) {
+                                validate();
+                              }).catchError((error) {
+                                cancel();
+                              });
+                            } catch (e) {
+                              cancel();
+                            }
+                          }
+                        },
+                        child: Padding(
+                            padding: EdgeInsets.only(left: 30, right: 30),
                             child: Text('Submit',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 20.0,
-                                    fontWeight: FontWeight.bold)),
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.orange,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.0),
-                              ),
-                            ))))
+                                    fontWeight: FontWeight.bold))),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        )))
               ],
             )));
   }

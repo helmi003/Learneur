@@ -204,32 +204,31 @@ class _SignUpState extends State<SignUp> {
                           return null;
                         },
                         decoration: InputDecoration(
-                        hintText: "Description",
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
-                          ),
-                        )),
+                            hintText: "Description",
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(10),
+                              ),
+                            )),
                         onSaved: (input) => description = input!)),
                 Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Padding(
-                        padding: EdgeInsets.only(left: 30, right: 30),
-                        child: ElevatedButton(
-                      
-                        onPressed: signUp,
-                        child: Text('SignUp',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.bold)),
-                        style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.orange,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.0),
-                              ),
-                            ))),
+                      ElevatedButton(
+                          onPressed: signUp,
+                          child: Padding(
+                              padding: EdgeInsets.only(left: 30, right: 30),
+                              child: Text('SignUp',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.bold))),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.orange,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                          )),
                       Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
